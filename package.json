@@ -4,11 +4,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/scss:dist/css --no-source-map --style compressed",
-    "watch": "sass --watch src/scss:dist/css"
+    "build": "sass src/scss:dist/css --no-source-map --style=compressed",
+    "watch": "sass --watch src/scss:dist/css --no-source-map --style=compressed"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vininicius Zanato Velloso",
   "license": "ISC",
   "description": "",
   "devDependencies": {

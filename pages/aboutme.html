@@ -1,75 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site pessoal com informações sobre mim e meus projetos.">
-    <meta name="author" content="Vinícius Zanato Velloso">
-    <meta name="keywords" content="site pessoal, portfólio, desenvolvedor web">
-    <meta name="robots" content="index, follow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Site pessoal com informações sobre mim e meus projetos."
+    />
+    <meta name="author" content="Vinícius Zanato Velloso" />
+    <meta
+      name="keywords"
+      content="site pessoal, portfólio, desenvolvedor web"
+    />
+    <meta name="robots" content="index, follow" />
     <title>About Me</title>
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../dist/css/aboutme.css">
-</head>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../dist/css/pages/aboutme.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="back-button-container">
-            <a href="../index.html" class="back-button">
-                <img src="../src/img/icons/back-arrow-1.png" alt="">
-            </a>
-        </div>
-        <div class="toggle-dark-mode-container">
-            <input id="toggle" class="toggle" type="checkbox">
-        </div>
+      <div class="back-button-container">
+        <a href="../index.html" class="back-button">
+          <img src="../src/img/icons/back-arrow-1.png" alt="" />
+        </a>
+      </div>
+      <div class="toggle-dark-mode-container">
+        <input id="toggle" class="toggle" type="checkbox" />
+      </div>
     </header>
 
     <main class="main">
-        <div class="title-container">
+      <div class="title-container">
+        <p class="title">About Me</p>
+      </div>
 
-            <p class="title">
-                About Me
-            </p>
-
-        </div>
-
-        <div class="aboutme-container">
-            <div class="aboutme">
-                <div class="text-container">
-                    <div class="text-title">
-                        <img src="../src/img/icons/back-arrow-1.png" alt="" class="arrow-icon">
-                        <p>Titulo</p>
-                    </div>
-
-                    <div class="text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quod sint corrupti quidem
-                            quam voluptate beatae distinctio maxime in ea? Reiciendis exercitationem vero quos corporis
-                            quis fuga cupiditate, illum sapiente.</p>
-                    </div>
-                </div>
+      <div class="aboutme-container">
+        <div class="aboutme">
+          <div class="text-container">
+            <div class="text-title">
+              <img
+                src="../src/img/icons/back-arrow-1.png"
+                alt=""
+                class="arrow-icon"
+              />
+              <p>Titulo</p>
             </div>
 
+            <div class="text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas quod sint corrupti quidem quam voluptate beatae
+                distinctio maxime in ea? Reiciendis exercitationem vero quos
+                corporis quis fuga cupiditate, illum sapiente.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="social-links-container">
-            <a href="https://www.instagram.com/zanato_o/?next=%2F">
-                <img src="../src/img/icons/instagram-white-icon.png" alt="" class="icon">
-            </a>
-            <a href="https://github.com/ViniciusZanato">
-                <img src="../src/img/icons/github-white-icon.png" alt="" class="icon git">
-            </a>
-            <a href="https://www.linkedin.com/in/vin%C3%ADcius-zanato-985b03205/">
-                <img src="../src/img/icons/linkedin-white-icon.png" alt="" class="icon">
-            </a>
-        </div>
+      <div class="social-links-container">
+        <a href="https://www.instagram.com/zanato_o/?next=%2F" target="_blank">
+          <img
+            src="../src/img/icons/instagram-white-icon.png"
+            alt=""
+            class="icon"
+          />
+        </a>
+        <a href="https://github.com/ViniciusZanato" target="_blank">
+          <img
+            src="../src/img/icons/github-white-icon.png"
+            alt=""
+            class="icon git"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/vin%C3%ADcius-zanato-985b03205/"
+          target="_blank"
+        >
+          <img
+            src="../src/img/icons/linkedin-white-icon.png"
+            alt=""
+            class="icon"
+          />
+        </a>
+      </div>
     </main>
 
     <script src="dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="../src/js/hide-header-js/hide-header.js"></script>
     <script src="../src/js/dark-mode-script-js/dark-mode.js"></script>
-    <script src="../src/js/projects-page-js/projects.js"></script>
-
-</body>
-
+    <script src="../src/js/pages/projects.js"></script>
+  </body>
 </html>
