@@ -1,105 +1,9 @@
-body.dark-mode {
-  background: linear-gradient(-45deg, #000000, #2c2c2c, #4b4b4b, #646464);
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
-}
-
-body.light-mode {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
-}
+@use "../layout/header";
+@use "../layout/background";
+@use "../layout/footer";
 
 body {
   margin: 0;
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-    transition: opacity 0.3s ease-in-out;
-
-    .back-button-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .back-button {
-        width: fit-content;
-        height: fit-content;
-        margin-left: 25px;
-        padding: 0;
-        border: none;
-        outline: none;
-        background-color: transparent;
-
-        &:hover {
-          cursor: pointer;
-        }
-
-        > img {
-          width: 20px;
-          height: auto;
-        }
-      }
-    }
-
-    .toggle-dark-mode-container {
-      .toggle {
-        --size: 2rem;
-        --ray-size: calc(var(--size) * -0.4);
-        --offset-orthogonal: calc(var(--size) * 0.65);
-        --offset-diagonal: calc(var(--size) * 0.45);
-
-        cursor: pointer;
-        appearance: none;
-        outline: none;
-        width: var(--size);
-        height: var(--size);
-        margin: 25px;
-        box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
-        border-radius: 999px;
-        color: hsl(240, 100%, 95%);
-        transition: all 500ms;
-      }
-
-      .toggle:checked {
-        transform: scale(0.75);
-        color: hsl(240, 100%, 95%);
-        box-shadow:
-          inset 0 0 0 var(--size),
-          calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
-          var(--offset-orthogonal) 0 0 var(--ray-size),
-          0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
-          0 var(--offset-orthogonal) 0 var(--ray-size),
-          calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
-            var(--ray-size),
-          var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
-          calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0
-            var(--ray-size),
-          var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0
-            var(--ray-size);
-      }
-    }
-  }
 
   main {
     display: flex;
@@ -181,35 +85,6 @@ body {
             transform: scale(1.1);
             transition: all 0.5s ease;
           }
-        }
-      }
-    }
-
-    .social-links-container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      gap: 50px;
-      padding-top: 20px;
-
-      > a {
-        transition: all 0.3s ease;
-
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.2, 1.2);
-          transition: all 0.3s ease;
-        }
-
-        .icon {
-          color: rgb(223, 223, 223);
-          width: 35px;
-          height: auto;
-          object-fit: cover;
-        }
-
-        .icon.git {
-          transform: scale(1.3);
         }
       }
     }
