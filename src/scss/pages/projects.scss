@@ -26,7 +26,7 @@ body {
         margin: 0;
         padding: 0 20px;
         text-align: center;
-        font-size: 50px;
+        font-size: clamp(32px, 4vw, 50px);
         font-family: "Exo", sans-serif;
         color: #fff;
       }
@@ -74,7 +74,6 @@ body {
               margin: 0;
               font-family: "Exo", sans-serif;
               font-size: clamp(16px, 4vw, 22px);
-              //   font-size: 22px;
               text-align: center;
               color: #ffffff;
             }
@@ -91,34 +90,6 @@ body {
   }
 }
 
-// @media screen and (max-width: 1400px) {
-//   body {
-//     main {
-//       .projects-container {
-//         .projects {
-//           .card {
-//             width: 35%;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 992px) {
-//   body {
-//     main {
-//       .projects-container {
-//         .projects {
-//           .card {
-//             width: 100%;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 @media screen and (max-width: 768px) {
   body {
     main {
@@ -127,23 +98,6 @@ body {
           .card {
             width: 100%;
           }
-        }
-      }
-      .title-container {
-        .title {
-          font-size: 36px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 576px) {
-  body {
-    main {
-      .title-container {
-        .title {
-          font-size: 28px;
         }
       }
     }

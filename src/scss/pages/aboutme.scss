@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
     .title-container {
@@ -24,7 +24,7 @@ body {
         margin: 0;
         padding: 0 20px;
         text-align: center;
-        font-size: 50px;
+        font-size: clamp(32px, 4vw, 50px);
         font-family: "Exo", sans-serif;
         color: #fff;
       }
@@ -34,8 +34,6 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      height: max-content;
 
       .aboutme {
         display: flex;
@@ -43,53 +41,74 @@ body {
         justify-content: center;
         gap: 30px;
         width: 80%;
-        height: max-content;
+        height: 558px;
 
         .left-content {
           display: flex;
           flex-direction: column;
           gap: 30px;
           width: 30%;
+          height: 100%;
 
           .profile-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            padding: 30px;
-            border-radius: 20px;
-            box-sizing: border-box;
-            background-color: #ffffff10;
-            // box-shadow: 0 0 20px hsla(0, 0%, 100%, 0.5);
-
-            img {
-              width: 250px;
-              height: 250px;
-              object-fit: cover;
-              border-radius: 50%;
-              //   box-shadow: 0 0 20px hsla(0, 0%, 100%, 0.5);
-            }
-            p {
-              font-family: "Exo", sans-serif;
-              font-size: 24px;
-              color: #ffffff;
-            }
-          }
-          .stack-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             width: 100%;
             padding: 20px;
             border-radius: 20px;
             box-sizing: border-box;
             background-color: #ffffff10;
-            // box-shadow: 0 0 20px hsla(0, 0%, 100%, 0.5);
 
             img {
-              width: 40px;
-              height: 40px;
+              width: clamp(150px, 12vw, 250px);
+              aspect-ratio: 1;
+              height: auto;
+              object-fit: cover;
+              border-radius: 50%;
+              box-shadow: 0 0 20px hsla(0, 0%, 100%, 0.5);
+            }
+            p {
+              margin: 0;
+              font-family: "Exo", sans-serif;
+              font-size: clamp(20px, 1.5vw, 24px);
+              text-align: center;
+              color: #ffffff;
+            }
+          }
+          .stack-container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            width: 100%;
+            padding: 25px;
+            border-radius: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff10;
+
+            .title {
+              p {
+                margin: 0;
+                font-family: "Exo", sans-serif;
+                font-size: clamp(20px, 1.5vw, 24px);
+                color: #ffffff;
+              }
+            }
+
+            .stacks {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              row-gap: 20px;
+
+              img {
+                width: clamp(20px, 2.5vw, 40px);
+                height: auto;
+                aspect-ratio: 1;
+                justify-self: center;
+                align-self: center;
+              }
             }
           }
         }
@@ -97,22 +116,42 @@ body {
         .right-content {
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
           width: 70%;
-          height: stretch;
+          height: 100%;
+          padding: 35px 20px;
           border-radius: 20px;
           box-sizing: border-box;
           background-color: #ffffff10;
-          //   box-shadow: 0 0 20px hsla(0, 0%, 100%, 0.5);
 
           .text {
+            box-sizing: border-box;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+              width: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+              background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background: #ffffff40;
+              border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+              background: #777;
+            }
+
             > p {
               margin: 0;
               padding: 20px;
               padding-top: 0;
               text-align: justify;
-              font-size: 18px;
+              font-size: clamp(16px, 1.2vw, 18px);
               font-family: "Exo", sans-serif;
               color: #fff;
 
@@ -127,9 +166,48 @@ body {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   body {
     main {
+      justify-content: flex-start;
+      margin-top: 105px;
+
+      .aboutme-container {
+        .aboutme {
+          flex-direction: column;
+          height: max-content;
+
+          .left-content {
+            width: 100%;
+
+            .stack-container {
+              .title {
+                p {
+                  text-align: center;
+                }
+              }
+
+              .stacks {
+                img {
+                  width: 30px;
+                }
+              }
+            }
+          }
+
+          .right-content {
+            width: 100%;
+            padding: 20px;
+
+            .text {
+              > p {
+                padding: 20px 0;
+                padding-top: 0;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
