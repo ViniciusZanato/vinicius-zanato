@@ -81,10 +81,12 @@ body {
             }
           }
 
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-            transition: all 0.5s ease;
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              cursor: pointer;
+              transform: scale(1.1);
+              transition: all 0.2s ease;
+            }
           }
         }
       }
