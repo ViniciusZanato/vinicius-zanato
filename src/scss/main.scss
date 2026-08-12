@@ -3,7 +3,13 @@
 @use "./layout/footer";
 
 body {
-  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 120px 0;
+  overflow-x: hidden;
 
   main {
     display: flex;
@@ -11,8 +17,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    width: 100vw;
-    height: 100vh;
 
     .photo-container {
       .photo {
@@ -66,10 +70,12 @@ body {
             font-size: 25px;
             transition: all 0.2s ease;
 
-            &:hover {
-              cursor: pointer;
-              transform: scale(1.1);
-              transition: all 0.2s ease;
+            @media (hover: hover) and (pointer: fine) {
+              &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: all 0.2s ease;
+              }
             }
           }
         }
