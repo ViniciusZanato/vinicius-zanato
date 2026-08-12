@@ -8,10 +8,12 @@
   > a {
     transition: all 0.3s ease;
 
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.2, 1.2);
-      transition: all 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+      }
     }
 
     .icon {
