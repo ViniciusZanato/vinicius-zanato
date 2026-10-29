@@ -181,7 +181,7 @@ body {
 @media screen and (max-width: 768px) {
   body {
     height: unset;
-    min-height: 100%;
+    min-height: 100vh;
 
     main {
       .aboutme-container {

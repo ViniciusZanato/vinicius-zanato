@@ -9,7 +9,7 @@ html {
 body {
   box-sizing: border-box;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -101,6 +101,9 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
+    height: unset;
+    min-height: 100vh;
+
     main {
       .projects-container {
         .projects {
