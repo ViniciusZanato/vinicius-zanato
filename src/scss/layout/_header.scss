@@ -5,7 +5,7 @@ header {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  height: auto;
+  height: 86px;
 
   &:has(.toggle-dark-mode-container) {
     justify-content: space-between;
@@ -29,14 +29,16 @@ header {
         cursor: pointer;
       }
 
-      > img {
+      >img {
         width: 20px;
         height: auto;
       }
     }
   }
 
+  //remove "display: none;" to show toggle button and activate light/dark mode
   .toggle {
+    display: none;
     --size: 2rem;
     --ray-size: calc(var(--size) * -0.4);
     --offset-orthogonal: calc(var(--size) * 0.65);
@@ -63,8 +65,7 @@ header {
       var(--offset-orthogonal) 0 0 var(--ray-size),
       0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
       0 var(--offset-orthogonal) 0 var(--ray-size),
-      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
-        var(--ray-size),
+      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size),
       var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
       calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
       var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);

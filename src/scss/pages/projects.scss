@@ -2,13 +2,19 @@
 @use "../layout/background";
 @use "../layout/footer";
 
-body {
-  width: 100%;
+html {
   height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 120px 0;
+  padding: 120px 0;
+  margin: 0;
   overflow-x: hidden;
 
   main {
@@ -41,7 +47,6 @@ body {
       .projects {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
         gap: 30px;
         width: 100%;
         height: fit-content;
@@ -99,6 +104,8 @@ body {
     main {
       .projects-container {
         .projects {
+          flex-wrap: wrap;
+
           .card {
             width: 100%;
           }
