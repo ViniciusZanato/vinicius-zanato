@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 120px 0;
+  padding: 90px 0;
   margin: 0;
   overflow-x: hidden;
 
@@ -85,17 +85,16 @@ body {
           .progress-bar {
             height: 10px;
             border-radius: 30px;
-            background-image: linear-gradient(
-              to bottom,
-              rgba(255, 255, 255, 0.3),
-              rgba(255, 255, 255, 0.05)
-            );
+            background-image: linear-gradient(to bottom,
+                rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0.05));
             transition: 0.4s linear;
             transition-property: width, background-color;
           }
         }
 
         .progress-moved {
+
           .html,
           .css,
           .js,
@@ -160,6 +159,9 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
+    height: unset;
+    min-height: 100vh;
+
     main {
       .container {
         width: 75%;
